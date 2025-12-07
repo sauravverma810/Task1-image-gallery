@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Card Gallery</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="left">
+      <h1 class="logo">MyGallery</h1>
+    </div>
+
+<div class="right">
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#gallery-section">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+</div>
+
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-bg" id="hero-bg"></div>
+
+    <div class="slider" id="hero-slider">
+      <img src="slider1.png" class="slide active" alt="slide 1">
+      <img src="slider2.png" class="slide" alt="slide 2">
+      <img src="slider3.png" class="slide" alt="slide 3">
+    </div>
+
+    <div class="hero-content">
+      <h2 class="main-heading">Responsive Image Gallery</h2>
+      <div class="underline" aria-hidden="true"></div>
+      <p class="sub-text">Explore creativity, categories & download your favourites</p>
+
+      <div class="hero-dots dots" id="hero-dots" aria-hidden="true">
+        <button class="dot active" data-index="0"></button>
+        <button class="dot" data-index="1"></button>
+        <button class="dot" data-index="2"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FILTER BAR (Sticky) -->
+  <div class="filter-bar" id="filter-bar">
+    <div class="filters-left">
+      <div class="chips">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cars">Cars</button>
+        <button class="filter-btn" data-filter="coding">Coding</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="people">People</button>
+      </div>
+    </div>
+
+    <div class="filters-right">
+      <input id="search" type="search" placeholder="Search images..." aria-label="Search images">
+    </div>
+  </div>
+
+  <!-- SECTION LABEL -->
+  <h2 class="section-label">Images</h2>
+
+  <!-- GALLERY (CARD-BASED) -->
+  <section id="gallery-section" class="gallery">
+    <!-- Each card: data-title, data-category -->
+    <article class="card" data-title="Red Sports Car" data-category="cars">
+      <div class="card-media">
+        <img loading="lazy" src="image-car.png" alt="Red Sports Car">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Red Sports Car</h3>
+        <p class="card-cat">Cars</p>
+      </div>
+    </article>
+
+    <article class="card" data-title="Blue Sedan" data-category="cars">
+      <div class="card-media">
+        <img loading="lazy" src="image-car1.png" alt="Blue Sedan">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Blue Sedan</h3>
+        <p class="card-cat">Cars</p>
+      </div>
+    </article>
+
+        <article class="card" data-title="White Tesla" data-category="cars">
+      <div class="card-media">
+        <img loading="lazy" src="image-car2.png" alt="White Tesla">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">White Tesla</h3>
+        <p class="card-cat">Cars</p>
+      </div>
+    </article>
+
+        <article class="card" data-title="Punch" data-category="cars">
+      <div class="card-media">
+        <img loading="lazy" src="image-car4.png" alt="Punch">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Punch</h3>
+        <p class="card-cat">Cars</p>
+      </div>
+    </article>
+
+
+    <article class="card" data-title="Code on Laptop" data-category="coding">
+      <div class="card-media">
+        <img loading="lazy" src="coding.png" alt="Code on Laptop">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Code on Laptop</h3>
+        <p class="card-cat">Coding</p>
+      </div>
+    </article>
+
+    <article class="card" data-title="Programmer Desk" data-category="coding">
+      <div class="card-media">
+        <img loading="lazy" src="coding1.png" alt="Programmer Desk">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Programmer Desk</h3>
+        <p class="card-cat">Coding</p>
+      </div>
+    </article>
+
+        <article class="card" data-title="Programmer Desk" data-category="coding">
+      <div class="card-media">
+        <img loading="lazy" src="coding3.png" alt="Programmer Desk">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Programmer Desk</h3>
+        <p class="card-cat">Coding</p>
+      </div>
+    </article>
+
+    <article class="card" data-title="Autumn Forest" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="image7.png" alt="Autumn Forest">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Autumn Forest</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+    <article class="card" data-title="Mountain Lake" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="image5.png" alt="Mountain Lake">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Mountain Lake</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+        <article class="card" data-title="Tiger" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="image2.png" alt="Tiger">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Tiger</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+       <article class="card" data-title="Lion" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="image1.png" alt="Lion">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Lion</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+           <article class="card" data-title="Flower" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="img4.png" alt="Flower">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Flower</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+           <article class="card" data-title="Sun Set" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="image6.png" alt="Sun Set">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Sun Set</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+               <article class="card" data-title="Flower" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="img5.png" alt="Flower">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Flower</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+               <article class="card" data-title="Flower" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="img7.png" alt="Flower">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Flower</h3>
+        <p class="card-cat">Nature</p>
+      </div>
+    </article>
+
+           <article class="card" data-title="Flower" data-category="nature">
+      <div class="card-media">
+        <img loading="lazy" src="image7.png" alt="Flower">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Lion</h3>
+        <p class="card-cat">Flower</p>
+      </div>
+    </article>
+
+
+    <article class="card" data-title="City Portrait" data-category="people">
+      <div class="card-media">
+        <img loading="lazy" src="img01.jpg" alt="City Portrait">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">City Portrait</h3>
+        <p class="card-cat">People</p>
+      </div>
+    </article>
+
+    <article class="card" data-title="Studio Portrait" data-category="people">
+      <div class="card-media">
+        <img loading="lazy" src="img02.jpg" alt="Studio Portrait">
+        <div class="card-overlay">
+          <button class="open-lightbox">View</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Studio Portrait</h3>
+        <p class="card-cat">People</p>
+      </div>
+    </article>
+
+    <!-- add more cards as needed -->
+  </section>
+
+  <!-- LIGHTBOX (with caption + download + prev/next) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lb-close" class="lb-close" aria-label="Close">✕</button>
+    <button id="lb-prev" class="lb-arrow">◀</button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <div class="lb-caption">
+        <h3 id="lb-title"></h3>
+        <p id="lb-category"></p>
+      </div>
+      <a id="lb-download" class="lb-download" download>Download</a>
+    </div>
+    <button id="lb-next" class="lb-arrow">▶</button>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <h2>About</h2>
+    <p></p>This Image Gallery project is created as a part of my CodeAlpha Frontend Development Internship. It showcases my skills in HTML, CSS, and JavaScript, including responsive design, hover animations, smooth scrolling, and a modern lightbox feature with navigation.</p>
+    <p><small>© 2025 Saurav Kumar</small></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
